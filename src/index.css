@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --primary: #4B3DE1;
+    --secondary: #8c38ff;
+    --dark: #191c45;
+    --light: #eee;
+    --display: #01052E;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(99deg, rgba(2,0,36,0.9163866230085784) 0%, rgba(121,9,120,1) 27%, rgba(0,212,255,0.8743698162858894) 100%); 
+}
+
+.App {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--light);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 64px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    padding: 25px;
+    text-align: right;
+    background: var(--display);
+    color: var(--light);
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.display span {
+    font-size: 14px;
+    color: #888;
+}
+
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 30px 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.operators {
+    display: flex;
+}
+
+.operators button {
+    flex: 1 1 0%;
+    background: var(--primary);
+    font-weight: 700;
+}
+
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digits button {
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
+    background-color: var(--dark);
+}
+
+h2 {
+    color: #f1f1ff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5em;
+    border-bottom: 1px solid #000;
+    margin: 0.25em;
 }
